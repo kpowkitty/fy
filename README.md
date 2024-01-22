@@ -1,4 +1,6 @@
 # Fy: Your Financial Guide!
+![alt text](https://github.com/kpowkitty/fy/blob/main/res/gwc-ai4financialgood-logo.png?raw=true)
+
 
 Girls Who Code at OCC: AI4FinancialGood Challenge Project.
 
