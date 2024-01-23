@@ -2,4 +2,4 @@
 design.md
 env.cmake
 build
-openai_api_key_test.sh
+src/openai_api_key_test.sh
