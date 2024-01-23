@@ -1,5 +1,3 @@
-# Fy: Your Financial Guide!
-
 ![alt text](https://github.com/kpowkitty/fy/blob/main/res/gwc-ai4financialgood-logo.png?raw=true)
 
 Girls Who Code at OCC: AI4FinancialGood Challenge Project. We are a female only team from Orange Coast College, actively working within our community to support, uplift and drive other women towards success!
