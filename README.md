@@ -25,13 +25,25 @@ money, debt, taxes, or anything else!
 
 ## Description
 
-Fy is your AI financial guide. She is a terminal based AI assistant that will monitor user's spending data. With this data, she will make informative suggestions to bring the user towards better financial security.  
-- Key Component: She is non-biased, educational based. Her focus is filling the educational gap of financial insecurity, especially with those of lower income. 
+
+Key Component: She is non-biased, educational based. Her focus is filling the educational gap of financial insecurity, especially with those of lower income.
+
+What would it do?  
+- Fy is your AI financial guide. She is a terminal based AI assistant that will monitor user's spending data. With this data, she will make informative                   suggestions to bring the user towards better financial security.
+  
+Who would it help?  
+- Fy would help everyone come to better financial security, particularly fighting the educational gap of financial information.  
+
+What data would it use?   
+- Fy would use user's bank statements to track what they are spending, where they are spending and how much per each category.
+
+How could it address some of the financial inequalities that currently exist in the world?  
+- Most financial insecurity comes from a lack of financial awareness and education, particularly in minorities. She aims to be understandable, knowledgable, and educational in order to fill this gap.  
 
 ## Fy can advise:  
-      - How much does the average consumer spend on [xyz]?  
-      - Where am I spending too much money?  
-      - The importance of:  
+      * How much does the average consumer spend on [xyz]?  
+      * Where am I spending too much money?  
+      * The importance of:  
            - education, including free college opportunities and scholarships  
            - building credit
            - investing in retirement
