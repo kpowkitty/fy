@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/kpowkitty/fy/blob/main/res/gwc-ai4financialgood-logo.png?raw=true)
 
-Girls Who Code at OCC: AI4FinancialGood Challenge Project.
+Girls Who Code at OCC: AI4FinancialGood Challenge Project. We are a female only team from Orange Coast College, actively working within our community to support, uplift and drive other women towards success!
 
 # AI4FINANCIALGOOD
 
@@ -25,7 +25,6 @@ money, debt, taxes, or anything else!
 # FY
 
 ## Description
-
 
 Key Component: She is non-biased, educational based. Her focus is filling the educational gap of financial insecurity, especially with those of lower income.
 
@@ -60,4 +59,3 @@ How could it address some of the financial inequalities that currently exist in 
   Group Members:  
      @vynguyen205  
      @huynhkatrina  
->>>>>>> ff9a2fab4c3ac396b48a5e332ab86b1d7c3efbc5
