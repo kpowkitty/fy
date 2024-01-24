@@ -1,5 +1,5 @@
 .env
-design.md
+DESIGN.md
 env.cmake
 build
 src/openai_api_key_test.sh
