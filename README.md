@@ -56,4 +56,8 @@ How could it address some of the financial inequalities that currently exist in 
 
   Group Members:  
      @vynguyen205  
-     @huynhkatrina  
+     @huynhkatrina
+     
+# For collaborators
+* Read HELP
+* Read STYLE
