@@ -27,7 +27,7 @@ money, debt, taxes, or anything else!
 Key Component: She is non-biased, educational based. Her focus is filling the educational gap of financial insecurity, especially with those of lower income.
 
 What would it do?  
-- Fy is your AI financial guide. She is a terminal based AI assistant that will monitor user's spending data. With this data, she will make informative                   suggestions to bring the user towards better financial security.
+- Fy is your AI financial guide. She is a terminal based AI assistant that will monitor user's spending data. With this data, she will make informative suggestions to bring the user towards better financial security.
   
 Who would it help?  
 - Fy would help everyone come to better financial security, particularly fighting the educational gap of financial information.  
