@@ -1,6 +1,6 @@
 ## FY'S CMAKE LIST ##
 
-cmake_minimum_required(VERSION 3.21...3.27)
+cmake_minimum_required(VERSION 3.16...3.27)
 
 # project name, description, and language
 project(fy
@@ -12,56 +12,6 @@ set(VERSION_PATCH 0)
 
 # add src code
 add_executable(fy src/main.cpp)
-
-# private vs. public lib & cxx std - will use cxx 17
-target_compile_features(fy PRIVATE cxx_std_17)
-
-# dir for include header
-target_include_directories(fy PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
-# list sources
-target_sources(fy PUBLIC src/main.cpp
-    # liboai core
-    dep/liboai/liboai/core/authorization.cpp
-    dep/liboai/liboai/core/netimpl.cpp
-    dep/liboai/liboai/core/response.cpp
-    # liboai modules
-    dep/liboai/liboai/components/chat.cpp
-    )
-
-# liboai dep and linking
-target_include_directories(fy PRIVATE
-    "${CMAKE_SOURCE_DIR}/dep/liboai/liboai/include")
-target_include_directories(fy PRIVATE
-    "${CMAKE_SOURCE_DIR}/dep/liboai/liboai/include/components")
-target_include_directories(fy PRIVATE
-    "${CMAKE_SOURCE_DIR}/dep/liboai/liboai/include/core")
-
-# link lib needed
-target_link_libraries(fy PUBLIC
-    openal
-    curl
-    )
-
-# Typically you don't care so much for a third party library's tests to be
-# run from your own project's code.
-set(JSON_BuildTests OFF CACHE INTERNAL "")
-
-# If you only include this third party in PRIVATE source files, you do not
-# need to install it when your main project gets installed.
-# set(JSON_Install OFF CACHE INTERNAL "")
-
-# Don't use include(nlohmann_json/CMakeLists.txt) since that carries with it
-# unintended consequences that will break the build.  It's generally
-# discouraged (although not necessarily well documented as such) to use
-# include(...) for pulling in other CMake projects anyways.
-add_subdirectory("${CMAKE_SOURCE_DIR}/dep/json")
-
-target_link_libraries(fy PRIVATE nlohmann_json::nlohmann_json)
-
-# see include/.h dir
-target_include_directories(fy PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 # debug compile flags
 set(CMAKE_CXX_FLAGS_DEBUG_INIT "-Wall")
@@ -80,3 +30,25 @@ IF (DEFINED ENV{OPENAI_API_KEY})
 ELSE()
     MESSAGE(STATUS "WTF")
 ENDIF()
+
+# !have not tested doc yet, look into
+option(BUILD_DOC "Build documentation" ON)
+# check if doxygen is installed
+find_package(Doxygen REQUIRED)
+if (DOXYGEN_FOUND)
+    # set input and output files
+    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/doc/Doxyfile.in)
+    set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
+    # request to configure the files
+    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+    message(STATUS "Doxygen build started")
+    # NOTE: ALL builds doc together with app - all targets
+    add_custom_target(doc_doxygen ALL
+        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+        WORKING_DIRECTORY $CMAKE_CURRENT_BINARY_DIR}
+        COMMENT "Generating API documentation with Doxygen"
+        VERBATIM)
+else (DOXYGEN_FOUND)
+    message(STATUS "Doxygen needs to be installed to generate doxygen
+    documentation")
+endif (DOXYGEN_FOUND)
