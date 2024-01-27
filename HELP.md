@@ -21,7 +21,11 @@ I have set up the project with CMake so it can be run in any application or oper
 
 ### BUILDING THE PROGRAM <br>
 
-<p align="center"><b>** YOU MUST BE IN YOUR BUILD DIRECTORY TO DO THESE TWO COMMANDS **</b></p><br>
+Use <code>mkdir debug</code> to create your build folder.
+
+<code>cd debug</code> to enter your build folder.
+
+<p align="center"><b>** YOU MUST BE IN YOUR DEBUG DIRECTORY TO DO THESE NEXT TWO COMMANDS **</b></p><br>
 
 1. Sourcing the cache<br>
 
@@ -36,13 +40,19 @@ When you do this command, it sources the directory you specificy. In our case, i
 
 - This calls CMake to now compile those files, and it produces an executable.<br>
 
-**The main executable is fy. But, I have also added an executable for <b>testing.</b> I want to keep our tests in a separate .cpp file from main so we can all test and it not be constantly conflicted. Now, your compile command should be this:<br>
+- The main executable is fy. 
+
+<code>./fy</code> runs the executable.
+
+### (TODO: IMPLEMENT TESTING EXECUTABLE: Ignore this for now). 
+But, I have also added an executable for <b>testing.</b> I want to keep our tests in a separate .cpp file from main so we can all test and it not be constantly conflicted. Now, your compile command should be this:<br>
 
 <code>cmake –build . –target testing</code> or <code>make testing</code> (again, if you prefer)<br>
 
 And it will compile it with your testing file specifically. You must run ./testing instead of ./fy.<br>
 
-Once you have tested your work and it is working as expected, you can add it to the main.cpp file. Then, test that by doing the original build “cmake –build .” and test it with “./fy”<br>
+Once you have tested your work and it is working as expected, you can add it to the main.cpp file. Then, test that by doing the original build “cmake –build .” and test it with “./fy”<br> 
+### END IGNORE
 
 ### Important Note ###
 
