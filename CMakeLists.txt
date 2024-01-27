@@ -13,42 +13,26 @@ set(VERSION_PATCH 0)
 # add src code
 add_executable(fy src/main.cpp)
 
+# private vs. public lib & cxx std - will use cxx 17
+target_compile_features(fy PRIVATE cxx_std_17)
+
+# dir for include header
+target_include_directories(fy PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+target_sources(fy PUBLIC src/main.cpp)
+
+# link lib needed
+target_link_libraries(fy PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai.a
+    curl
+    )
+
+target_include_directories(fy PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/core
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/components
+    )
+
 # debug compile flags
 set(CMAKE_CXX_FLAGS_DEBUG_INIT "-Wall")
-
-add_custom_command(TARGET fy PRE_BUILD
-  COMMAND
-    ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/env.cmake
-    ${CMAKE_CURRENT_SOURCE_DIR}/.env  # dotenv
-    env
-)
-
-set(ENV{OPENAI_API_KEY} "$ENV{OPENAI_API_KEY}")
-
-IF (DEFINED ENV{OPENAI_API_KEY})
-    MESSAGE(STATUS "env seen $ENV{OPENAI_API_KEY}")
-ELSE()
-    MESSAGE(STATUS "WTF")
-ENDIF()
-
-# !have not tested doc yet, look into
-option(BUILD_DOC "Build documentation" ON)
-# check if doxygen is installed
-find_package(Doxygen REQUIRED)
-if (DOXYGEN_FOUND)
-    # set input and output files
-    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/doc/Doxyfile.in)
-    set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
-    # request to configure the files
-    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
-    message(STATUS "Doxygen build started")
-    # NOTE: ALL builds doc together with app - all targets
-    add_custom_target(doc_doxygen ALL
-        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
-        WORKING_DIRECTORY $CMAKE_CURRENT_BINARY_DIR}
-        COMMENT "Generating API documentation with Doxygen"
-        VERBATIM)
-else (DOXYGEN_FOUND)
-    message(STATUS "Doxygen needs to be installed to generate doxygen
-    documentation")
-endif (DOXYGEN_FOUND)
