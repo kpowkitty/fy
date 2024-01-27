@@ -10,6 +10,7 @@ set(VERSION_MAJOR 0)
 set(VERSION_MINOR 0)
 set(VERSION_PATCH 0)
 
+# glob liboai src
 file(GLOB LIBOAI_SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/core/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/components/*.cpp
@@ -35,10 +36,13 @@ target_link_libraries(fy PUBLIC
     curl
     )
 
+# include local include, liboai include, and json include
 target_include_directories(fy PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/core
-    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/components
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/core/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/components/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/json/single_include/
     )
 
 # debug compile flags
