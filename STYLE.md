@@ -19,7 +19,7 @@ example:<br>
 */</code><br>
 or<br>
 <code>/**<br>
-\* @project Project name<br>
+\* @project Fy: Your Financial Guide<br>
 \* @file main.cpp<br>
 \* @developers anon<br>
 */</code><br>
