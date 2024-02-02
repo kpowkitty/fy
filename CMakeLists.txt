@@ -28,7 +28,8 @@ target_compile_features(fy PRIVATE cxx_std_17)
 target_include_directories(fy PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-target_sources(fy PUBLIC src/main.cpp)
+target_sources(fy PUBLIC src/main.cpp
+    src/ai.cpp)
 
 # link lib needed
 target_link_libraries(fy PUBLIC
