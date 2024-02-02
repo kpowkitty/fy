@@ -20,7 +20,7 @@ money, debt, taxes, or anything else!
 - Originality and Creativity: Project demonstrates substantial originality. Ex. Product combines ideas in a unique way not previously done before, and reflection questions demonstrate thoughtful intention on differentiating it from what currently exists.
 - Reflection: Project includes thoughtful responses that fully answer the reflection questions.
 
-# FY, YOUR FINANCIAL GUIDE!
+# FY: YOUR FINANCIAL GUIDE
 
 ## Description
 
