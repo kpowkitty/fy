@@ -26,7 +26,8 @@ target_compile_features(fy PRIVATE cxx_std_17)
 
 # dir for include header
 target_include_directories(fy PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/libaoi/liboai/include)
 
 target_sources(fy PUBLIC src/main.cpp
     src/ai.cpp)
@@ -35,6 +36,7 @@ target_sources(fy PUBLIC src/main.cpp
 target_link_libraries(fy PUBLIC
     #${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai.a
     curl
+    curlpp
     )
 
 # include local include, liboai include, and json include
