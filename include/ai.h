@@ -1,6 +1,6 @@
 #pragma once
 
-#include <liboai.h>
+#include "liboai.h"
 
 class AI {
 public:

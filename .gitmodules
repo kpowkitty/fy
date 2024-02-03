@@ -1,9 +1,0 @@
-[submodule "dep/json"]
-	path = dep/json
-	url = git@github.com:nlohmann/json.git
-[submodule "dep/liboai"]
-	path = dep/liboai
-	url = git@github.com:D7EAD/liboai.git
-[submodule "debug/dep/json"]
-	path = debug/dep/json
-	url = git@github.com:nlohmann/json.git
