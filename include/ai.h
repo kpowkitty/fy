@@ -6,6 +6,7 @@ class AI {
 public:
     AI();
     void response();
+    void question(const string& question);
 private:
     /**
      * @var static const std::string OPENAI_API_KEY
@@ -13,6 +14,15 @@ private:
      */
     static const std::string _OPENAI_API_KEY;
 
+    /**
+     * @var liboai::OpenAI _ai
+     * TODO: make _ai singleton?
+     */
     liboai::OpenAI _ai;
+
+    /**
+     * @var liboai::Conversation _conversation
+     * variable to store conversation data of user.
+     */
     liboai::Conversation _conversation;
 };

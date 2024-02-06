@@ -63,3 +63,22 @@ void AI::response() {
         }
     }
 }
+
+/** Question.
+* @param string for question to be asked
+* @return none
+* @remarks Function for asking the ai a pre-determined question.
+*/
+void AI::question(const string& question) {
+    _conversation.AddUserData(question);
+
+    // get response from OpenAI
+    liboai::Response response = _ai.ChatCompletion->create(
+                                    "gpt-3.5-turbo", _conversation);
+
+    // update our conversation with the responseconvo
+    _conversation.Update(response);
+
+    // print the response
+    std::cout << "Fy: " << _conversation.GetLastResponse() << std::endl;
+}
