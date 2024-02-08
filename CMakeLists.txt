@@ -46,6 +46,7 @@ target_include_directories(fy PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/core/
     ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/components/
     ${CMAKE_CURRENT_SOURCE_DIR}/dep/json/single_include/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/curl/include/
     )
 
 # debug compile flags
