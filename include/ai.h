@@ -6,7 +6,7 @@ class AI {
 public:
     AI();
     void response();
-    void question(const string& question);
+    void question(const std::string& question);
 private:
     /**
      * @var static const std::string OPENAI_API_KEY

@@ -1,16 +1,28 @@
+// where is doxygen style header for start of file?
+// refer to STYLE.md for all style errors
 #include "ai.h"
 
 #include <stdlib.h>
 #include <string>
 #include <iostream>
 
+// cpp standard style is prototypes BEFORE main, definitions AFTER main
+// naming doesn't follow style guide
+// where are doxygen style headers for functions?
 void displayMainMenu() {
-    std::cout << “1. Ask Fy anything” << std::endl
+    // std::endl is an expensive fn, why is this on every line?
+    // it should be used to explicitly clear a text buffer, not create a \n
+    // also, please align the tabbed couts like this:
+    // std::cout << "hi"
+    //           << "test"
+    //           << "this"
+    std::cout << "1. Ask Fy anything" << std::endl
 	      << "2. Credit Questions" << std::endl
 	      << "3. Govt Aide Questions" << std::endl
 	      << "4. College Questions" << std::endl
 	      << "5. Exit" << std::endl;
 }
+// fn not spaced correctly, style guide
 void displayCreditSubmenu() {
     std::cout << "1. What is Credit?" << std::endl
 	      << "2. Best Starter Credit Cards" << std::endl
@@ -21,6 +33,7 @@ void displayCreditSubmenu() {
 	      << "7. Go back to main menu" << std::endl;
 }
 void displayGovtSubmenu() {
+    // unprofessional? govt? that's not acceptable
     std::cout << "1. What California govt aide is out there?" << std::endl
 	      << "2. What is SNAP/TANF?" << std::endl
 	      << "3. Am I eligible for SNAP/TANF?" << std::endl
@@ -36,8 +49,9 @@ void displayCollegeSubmenu() {
 
 int main() {
     AI ai;
-    // TODO: call menu function
-    std::cout << “Hi, welcome to your financial helper! Please choose a prompt to get started.” << std::endl;
+    // 80 col? style guide?
+    std::cout << "Hi, welcome to your financial helper! Please choose a prompt to get started." << std::endl;
+    // passing input as an int? what happens when they don't input an int?
     int choice;
 
     do {
@@ -45,7 +59,9 @@ int main() {
 	std::cin >> choice;
 
 	switch (choice) {
+        // case justified with switch, style guide?
 	    case 1:
+                // 8 space tab, should be 4?
     	        try {
                     ai.response();
     	        }
@@ -58,8 +74,9 @@ int main() {
 	        do {
 	            displayCreditSubmenu();
 	            std::cin >> choice;
-	            
-		    //questions could be stored in array to make printing/inputting easier
+
+		    // questions could be stored in array to make printing/inputting
+            // easier
 
 	            switch (choice) {
 	                case 1:
@@ -81,6 +98,10 @@ int main() {
 	                    ai.question("How often should I open credit lines?");
 	                    break;
 	                default:
+                        // it's only going to say invalid choice if an int is
+                        // entered though? if a str is entered, then it's going
+                        // to just throw empty
+                        // shell lines and the user has no clue what's going on?
 	                    std::cout << "Invalid choice. " <<
 				      << "Please select a number from 1-7." << std::endl;
 	            }
@@ -91,7 +112,7 @@ int main() {
 	        do {
 	            displayGovtSubmenu();
 	            std::cin >> choice;
-	            
+
 	            switch (choice) {
 	                case 1:
 	                    ai.question("What California govt aide is out there?");
@@ -113,7 +134,7 @@ int main() {
 	        do {
 	            displayCollegeSubmenu();
 	            std::cin >> choice;
-	            
+
 	            switch (choice) {
 	                case 1:
 	                    ai.question("What are scholarships?");
@@ -134,11 +155,12 @@ int main() {
 	        break;
 
 	    default:
-	        std::cout << "Invalid choice. " << 
+	        std::cout << "Invalid choice. " <<
 			  << "Please select a number from 1-5." << std::endl;
 	}
     } while (choice != 5);
 
-    std::cout << “Thanks for using our financial helper!” << std::endl;
-    return 0;    
+    // Don't use "our," Fy should be the only one talking
+    std::cout << "Thanks for using our financial helper!" << std::endl;
+    return 0;
 }
