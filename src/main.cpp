@@ -1,7 +1,7 @@
 /**
 * @project Fy: Your Financial Guide
 * @file main.cpp
-* @developers Katrina Huynh (huynhkatrina)
+* @developers @huynhkatrina, @kpowkitty
 */
 
 //#include "ai.h"
