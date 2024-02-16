@@ -221,9 +221,9 @@ void display_government_submenu() {
 
 void display_college_submenu() {
 	std::cout << "College Submenu\n"
-		<< "1. What are scholarships?\n"
-		<< "2. Where can I attend college for free?\n"
-		<< "3. What is FAFSA?\n"
-		<< "4. How do I know I am eligible for FAFSA\n"
-		<< "5. Go back to main menu" << std::endl;
+        << "1. What are scholarships?\n"
+        << "2. Where can I attend college for free?\n"
+        << "3. What is FAFSA?\n"
+        << "4. How do I know I am eligible for FAFSA\n"
+        << "5. Go back to main menu" << std::endl;
 }
