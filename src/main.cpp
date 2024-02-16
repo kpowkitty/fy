@@ -48,11 +48,11 @@ int main() {
             switch (choice) {
                 case 1:
                     try {
-						//ai.response();
+                        //ai.response();
 					}
 					catch (std::exception& e) {
-						// this means the conversation broke
-						std::cout << e.what() << std::endl;
+                        // this means the conversation broke
+                        std::cout << e.what() << std::endl;
 					}
 					break;
                 case 2:
@@ -61,39 +61,39 @@ int main() {
                         display_credit_submenu();
                         std::cin >> answer;
 
-						try {
-							credit_choice = std::stoi(answer);
-							switch (credit_choice) {
-								case 1:
-									//ai.question();
-									break;
-								case 2:
-									//ai.question();
-									break;
-								case 3:
-									//ai.question();
-									break;
-								case 4:
-									//ai.question();
-									break;
-								case 5:
-									//ai.question();
-									break;
-								case 6:
-									//ai.question();
-									break;
-								case 7:
-									break;
-								default:
-									std::cout << "Invalid choice. "
-											  << "Please select a number "
-											  << "from 1-7." << std::endl;
-							}
-						}
-						catch (const std::exception& e) {
+                        try {
+                            credit_choice = std::stoi(answer);
+                            switch (credit_choice) {
+                                case 1:
+                                    //ai.question();
+                                    break;
+                                case 2:
+                                    //ai.question();
+                                    break;
+                                case 3:
+                                    //ai.question();
+                                    break;
+                                case 4:
+                                    //ai.question();
+                                    break;
+                                case 5:
+                                    //ai.question();
+                                    break;
+                                case 6:
+                                    //ai.question();
+                                    break;
+                                case 7:
+                                    break;
+                                default:
+                                    std::cout << "Invalid choice. "
+                                    		  << "Please select a number "
+                                    		  << "from 1-7." << std::endl;
+                            }
+                        }
+                        catch (const std::exception& e) {
         					std::cerr << "Invalid choice. "
-									  << "Please enter a valid number."
-									  << std::endl;
+                                      << "Please enter a valid number."
+                                      << std::endl;
             				std::cin.clear();
         				}
                     } while (credit_choice != 7);
@@ -104,86 +104,86 @@ int main() {
                         display_government_submenu();
                         std::cin >> answer;
 
-						try {
-							government_choice = std::stoi(answer);
-							switch (government_choice) {
-								case 1:
-									//ai.question();
-									break;
-								case 2:
-									//ai.question();
-									break;
-								case 3:
-									//ai.question();
-									break;
-								case 4:
-									//ai.question();
-									break;
-								default:
-									std::cout << "Invalid choice. "
-											  << "Please select a number "
-											  << "from 1-4." << std::endl;
-							}
-						}
-						catch (const std::exception& e) {
-        					std::cerr << "Invalid input. "
-									  << "Please enter a valid number."
-									  << std::endl;
-            				std::cin.clear();
-        				}
+                        try {
+                            government_choice = std::stoi(answer);
+                            switch (government_choice) {
+                                case 1:
+                                    //ai.question();
+                                    break;
+                                case 2:
+                                    //ai.question();
+                                    break;
+                                case 3:
+                                    //ai.question();
+                                    break;
+                                case 4:
+                                    //ai.question();
+                                    break;
+                                default:
+                                    std::cout << "Invalid choice. "
+                                              << "Please select a number "
+                                              << "from 1-4." << std::endl;
+                            }
+                        }
+                        catch (const std::exception& e) {
+                            std::cerr << "Invalid input. "
+                                      << "Please enter a valid number."
+                                      << std::endl;
+                            std::cin.clear();
+                        }
                     } while (government_choice != 4);
                     break;
                 case 4:
-					int college_choice;
+                    int college_choice;
                     do {
                         display_college_submenu();
                         std::cin >> answer;
 
-						try {
-							college_choice = std::stoi(answer);
-							switch (college_choice) {
-								case 1:
-									//ai.question();
-									break;
-								case 2:
-									//ai.question();
-									break;
-								case 3:
-									//ai.question();
-									break;
-								case 4:
-									//ai.question();
-									break;
-								case 5:
-									//ai.question();
-									break;
-								default:
-									std::cout << "Invalid choice. "
-											  << "Please select a number "
-											  << "from 1-5." << std::endl;
-							}
-						}
-						catch (const std::exception& e) {
-        					std::cerr << "Invalid input. "
-									  << "Please enter a valid number."
-									  << std::endl;
-            				std::cin.clear();
-        				}
+                        try {
+                            college_choice = std::stoi(answer);
+                            switch (college_choice) {
+                                case 1:
+                                    //ai.question();
+                                    break;
+                                case 2:
+                                    //ai.question();
+                                    break;
+                                case 3:
+                                    //ai.question();
+                                    break;
+                                case 4:
+                                    //ai.question();
+                                    break;
+                                case 5:
+                                    //ai.question();
+                                    break;
+                                default:
+                                    std::cout << "Invalid choice. "
+                                              << "Please select a number "
+                                              << "from 1-5." << std::endl;
+                            }
+                        }
+                        catch (const std::exception& e) {
+                            std::cerr << "Invalid input. "
+                                      << "Please enter a valid number."
+                                      << std::endl;
+                            std::cin.clear();
+                        }
                     } while (college_choice != 5);
                     break;
                 case 5:
                     std::cout << "Goodbye! It was a pleasure assisting you. "
-							  << "Have a wonderful day!" << std::endl;
+                              << "Have a wonderful day!" << std::endl;
                     break;
                 default:
                     std::cout << "Invalid choice. "
-							  << "Please select a number from 1-5." 
-							  << std::endl;
+                              << "Please select a number from 1-5." 
+                              << std::endl;
             }
         } 
-		catch (const std::exception& e) {
-        	std::cerr << "Invalid input. Please enter a valid number." 
-					  << std::endl;
+        catch (const std::exception& e) {
+            std::cerr << "Invalid input. Please enter a valid number." 
+                      << std::endl;
             std::cin.clear();
         }
     } while (choice != 5);
@@ -192,38 +192,38 @@ int main() {
 }
 
 void display_main_menu() {
-	std::cout << "Main Menu\n"
-			  << "1. Ask Fy anything\n"
-			  << "2. Credit Questions\n"
-			  << "3. Government Aid Questions\n"
-			  << "4. College Questions\n"
-			  << "5. Exit" << std::endl;
+    std::cout << "Main Menu\n"
+              << "1. Ask Fy anything\n"
+              << "2. Credit Questions\n"
+              << "3. Government Aid Questions\n"
+              << "4. College Questions\n"
+              << "5. Exit" << std::endl;
 }
 
 void display_credit_submenu() {
-	std::cout << "Credit Submenu\n"
-			  << "1. What is Credit?\n"
-			  << "2. Best Starter Credit Cards\n"
-			  << "3. What are credit rewards?\n"
-			  << "4. How can I avoid debt?\n"
-			  << "5. How can I build better credit?\n"
-			  << "6. How often should I open credit lines?\n"
-			  << "7. Go back to main menu" << std::endl;
+    std::cout << "Credit Submenu\n"
+              << "1. What is Credit?\n"
+              << "2. Best Starter Credit Cards\n"
+              << "3. What are credit rewards?\n"
+              << "4. How can I avoid debt?\n"
+              << "5. How can I build better credit?\n"
+              << "6. How often should I open credit lines?\n"
+              << "7. Go back to main menu" << std::endl;
 }
 
 void display_government_submenu() {
-	std::cout << "Government Aid Submenu\n"
-			  << "1. What California government aid is out there?\n"
-			  << "2. What is SNAP/TANF?\n"
-			  << "3. Am I eligible for SNAP/TANF?\n"
-			  << "4. Go back to main menu" << std::endl;
+    std::cout << "Government Aid Submenu\n"
+              << "1. What California government aid is out there?\n"
+              << "2. What is SNAP/TANF?\n"
+              << "3. Am I eligible for SNAP/TANF?\n"
+              << "4. Go back to main menu" << std::endl;
 }
 
 void display_college_submenu() {
-	std::cout << "College Submenu\n"
-        << "1. What are scholarships?\n"
-        << "2. Where can I attend college for free?\n"
-        << "3. What is FAFSA?\n"
-        << "4. How do I know I am eligible for FAFSA\n"
-        << "5. Go back to main menu" << std::endl;
+    std::cout << "College Submenu\n"
+              << "1. What are scholarships?\n"
+              << "2. Where can I attend college for free?\n"
+              << "3. What is FAFSA?\n"
+              << "4. How do I know I am eligible for FAFSA\n"
+              << "5. Go back to main menu" << std::endl;
 }
