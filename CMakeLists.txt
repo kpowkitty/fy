@@ -21,6 +21,38 @@ add_executable(fy src/main.cpp
     ${LIBOAI_SRC}
     )
 
+# link sfml static lib
+# set(SFML_STATIC_LIBRARIES TRUE)
+if(TARGET_SYSTEM_LINUX)
+    target_include_directories(fy PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/include/")
+    target_link_directories(fy PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/lib/")
+    set(SFML_DIR "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/lib/cmake/SFML")
+elseif(TARGET_SYSTEM_WIN32)
+    target_include_directories(fy PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/SFML-2.6.1/include/")
+    target_link_directories(fy PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/SFML-2.6.1/lib/")
+    set(SFML_DIR "${CMAKE_SOURCE_DIR}/dep/SFML-2.6.1/lib/cmake/SFML")
+endif()
+
+if(TARGET_SYSTEM_LINUX)
+    target_include_directories(test PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/include/")
+    target_link_directories(test PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/lib/")
+    set(SFML_DIR "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/lib/cmake/SFML")
+elseif(TARGET_SYSTEM_WIN32)
+    target_include_directories(test PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/include/")
+    target_link_directories(test PRIVATE
+        "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/lib/")
+    set(SFML_DIR "${CMAKE_SOURCE_DIR}/dep/linux/SFML-2.6.1/lib/cmake/SFML")
+endif()
+
+find_package(SFML COMPONENTS network graphics window system REQUIRED)
+
 # private vs. public lib & cxx std - will use cxx 17
 target_compile_features(fy PRIVATE cxx_std_17)
 
@@ -36,6 +68,11 @@ target_sources(fy PUBLIC src/main.cpp
 target_link_libraries(fy PUBLIC
     #${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai.a
     curl
+    sfml-graphics
+    sfml-window
+    sfml-system
+    OpenGL
+    GL
     )
 
 # include local include, liboai include, and json include
@@ -73,6 +110,10 @@ target_sources(test PUBLIC src/test.cpp
 target_link_libraries(test PUBLIC
     #${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai.a
     curl
+    sfml-graphics
+    sfml-system
+    OpenGL
+    GL
     )
 
 # include local include, liboai include, and json include
