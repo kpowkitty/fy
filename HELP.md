@@ -44,15 +44,14 @@ When you do this command, it sources the directory you specificy. In our case, i
 
 <code>./fy</code> runs the executable.
 
-### (TODO: IMPLEMENT TESTING EXECUTABLE: Ignore this for now). 
+### TESTING
 But, I have also added an executable for <b>testing.</b> I want to keep our tests in a separate .cpp file from main so we can all test and it not be constantly conflicted. Now, your compile command should be this:<br>
 
-<code>cmake –build . –target testing</code> or <code>make testing</code> (again, if you prefer)<br>
+<code>cmake –build . –target test</code> or <code>make test</code> (again, if you prefer)<br>
 
-And it will compile it with your testing file specifically. You must run ./testing instead of ./fy.<br>
+And it will compile it with your testing file specifically. You must run ./test instead of ./fy.<br>
 
 Once you have tested your work and it is working as expected, you can add it to the main.cpp file. Then, test that by doing the original build “cmake –build .” and test it with “./fy”<br> 
-### END IGNORE
 
 ### Important Note ###
 
