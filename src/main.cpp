@@ -31,12 +31,12 @@ void display_government_submenu();
 void display_college_submenu();
 
 int main() {
-	//AI ai;
+    //AI ai;
     std::string answer;
     int choice;
 
     std::cout << "Hi, I'm Fy, your financial helper! "
-			  << "Please choose a prompt to get started." << std::endl;
+              << "Please choose a prompt to get started." << std::endl;
     
     do {
         display_main_menu();
@@ -49,14 +49,14 @@ int main() {
                 case 1:
                     try {
                         //ai.response();
-					}
-					catch (std::exception& e) {
+                    }
+                    catch (std::exception& e) {
                         // this means the conversation broke
                         std::cout << e.what() << std::endl;
-					}
-					break;
+                    }
+                    break;
                 case 2:
-					int credit_choice;
+                    int credit_choice;
                     do {
                         display_credit_submenu();
                         std::cin >> answer;
@@ -86,12 +86,12 @@ int main() {
                                     break;
                                 default:
                                     std::cout << "Invalid choice. "
-                                    		  << "Please select a number "
-                                    		  << "from 1-7." << std::endl;
+                                              << "Please select a number "
+                                              << "from 1-7." << std::endl;
                             }
                         }
                         catch (const std::exception& e) {
-        					std::cerr << "Invalid choice. "
+                            std::cerr << "Invalid choice. "
                                       << "Please enter a valid number."
                                       << std::endl;
             				std::cin.clear();
@@ -99,7 +99,7 @@ int main() {
                     } while (credit_choice != 7);
                     break;
                 case 3:
-					int government_choice;
+                    int government_choice;
                     do {
                         display_government_submenu();
                         std::cin >> answer;
