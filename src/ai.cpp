@@ -18,9 +18,11 @@
 
 AI::AI() : _ai(), _conversation()
 {
-    if (_ai.auth.SetKeyEnv("OPENAI_API_KEY"));
-    else
+    // set the openAPI key from your environment variables
+    // cerr if it does not work
+    if (!(_ai.auth.SetKeyEnv("OPENAI_API_KEY"))) {
         std::cerr << "Set OpenAI API key: Failed.\n";
+    }
 }
 
 /** Response.
@@ -34,34 +36,24 @@ AI::AI() : _ai(), _conversation()
 
 void AI::response() {
     // holds next user input
-    std::string input;
+    std::string input = "";
+    // get next user input
+    std::cout << "What would you like to ask me?\n";
+    std::getline(std::cin, input);
+    std::cin.clear();
 
-    // flag: if user wants to exit, set to true to break loop
-    bool exit = false;
-    while(!exit) {
-        // get next user input
-        std::cout << "What would you like to ask me?";
-        std::getline(std::cin, input);
+    // add user input to conversation
+    _conversation.AddUserData(input);
 
-        // add user input to conversation
-        _conversation.AddUserData(input);
+    // get response from OpenAI
+    liboai::Response response = _ai.ChatCompletion->create(
+        "gpt-3.5-turbo", _conversation);
 
-        // get response from OpenAI
-        liboai::Response response = _ai.ChatCompletion->create(
-            "gpt-3.5-turbo", _conversation);
+    // update our conversation with the responseconvo
+    _conversation.Update(response);
 
-        // update our conversation with the responseconvo
-        _conversation.Update(response);
-
-        // print the response
-        std::cout << "Fy: " << _conversation.GetLastResponse() << std::endl;
-
-        std::cout << "Fy: Y to ask another question, N to exit to main menu";
-        std::cin >> input;
-        if (input == "N" || input == "n" || input == "no") {
-            exit = true;
-        }
-    }
+    // print the response
+    std::cout << "Fy: " << _conversation.GetLastResponse() << std::endl;
 }
 
 /** Question.
@@ -69,7 +61,7 @@ void AI::response() {
 * @return none
 * @remarks Function for asking the ai a pre-determined question.
 */
-void AI::question(const string& question) {
+void AI::question(const std::string& question) {
     _conversation.AddUserData(question);
 
     // get response from OpenAI

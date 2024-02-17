@@ -4,7 +4,7 @@
 * @developers @huynhkatrina, @kpowkitty
 */
 
-//#include "ai.h"
+#include "ai.h"
 
 #include <stdlib.h>
 #include <string>
@@ -31,11 +31,10 @@ void display_government_submenu();
 void display_college_submenu();
 
 int main() {
-    //AI ai;
+    AI ai;
     std::string answer;
-    int choice;
 
-    std::cout << "Hi, I'm Fy, your financial helper! "
+    std::cout << "Hi, I'm Fy, your financial guide! "
               << "Please choose a prompt to get started." << std::endl;
     
     do {
@@ -193,7 +192,7 @@ int main() {
 
 void display_main_menu() {
     std::cout << "Main Menu\n"
-              << "1. Ask Fy anything\n"
+              << "1. Ask me anything\n"
               << "2. Credit Questions\n"
               << "3. Government Aid Questions\n"
               << "4. College Questions\n"

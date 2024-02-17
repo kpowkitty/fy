@@ -36,7 +36,6 @@ target_sources(fy PUBLIC src/main.cpp
 target_link_libraries(fy PUBLIC
     #${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai.a
     curl
-    curlpp
     )
 
 # include local include, liboai include, and json include
@@ -51,3 +50,38 @@ target_include_directories(fy PRIVATE
 
 # debug compile flags
 set(CMAKE_CXX_FLAGS_DEBUG_INIT "-Wall")
+
+
+## TESTING EXECUTABLE ##
+
+add_executable(test src/test.cpp
+    ${LIBOAI_SRC}
+    )
+
+#private vs. public lib & cxx std - will use cxx 17
+target_compile_features(test PRIVATE cxx_std_17)
+
+# dir for include header
+target_include_directories(test PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/libaoi/liboai/include)
+
+target_sources(test PUBLIC src/test.cpp
+    src/ai.cpp)
+
+# link lib needed
+target_link_libraries(test PUBLIC
+    #${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai.a
+    curl
+    )
+
+# include local include, liboai include, and json include
+target_include_directories(test PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/core/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/include/components/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/json/single_include/
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/curl/include/
+    )
+
