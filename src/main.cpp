@@ -4,7 +4,7 @@
 * @developers @huynhkatrina, @kpowkitty
 */
 
-#include "ai.h"
+//#include "ai.h"
 
 #include <stdlib.h>
 #include <string>
@@ -31,10 +31,11 @@ void display_government_submenu();
 void display_college_submenu();
 
 int main() {
-    AI ai;
+    //AI ai;
     std::string answer;
+    int choice;
 
-    std::cout << "Hi, I'm Fy, your financial guide! "
+    std::cout << "Hi, I'm Fy, your financial helper! "
               << "Please choose a prompt to get started." << std::endl;
     
     do {
@@ -64,22 +65,22 @@ int main() {
                             credit_choice = std::stoi(answer);
                             switch (credit_choice) {
                                 case 1:
-                                    //ai.question();
+                                    //ai.question("What is Credit?"");
                                     break;
                                 case 2:
-                                    //ai.question();
+                                    //ai.question("Best Starter Credit Cards");
                                     break;
                                 case 3:
-                                    //ai.question();
+                                    //ai.question("What are credit rewards?");
                                     break;
                                 case 4:
-                                    //ai.question();
+                                    //ai.question("How can I avoid debt?");
                                     break;
                                 case 5:
-                                    //ai.question();
+                                    //ai.question("How can I build better credit?");
                                     break;
                                 case 6:
-                                    //ai.question();
+                                    //ai.question("How often should I open credit lines?");
                                     break;
                                 case 7:
                                     break;
@@ -107,16 +108,16 @@ int main() {
                             government_choice = std::stoi(answer);
                             switch (government_choice) {
                                 case 1:
-                                    //ai.question();
+                                    //ai.question("What California government aid is out there?");
                                     break;
                                 case 2:
-                                    //ai.question();
+                                    //ai.question("What is SNAP/TANF?");
                                     break;
                                 case 3:
-                                    //ai.question();
+                                    //ai.question("Am I eligible for SNAP/TANF?");
                                     break;
                                 case 4:
-                                    //ai.question();
+                                    //ai.question("Go back to main menu");
                                     break;
                                 default:
                                     std::cout << "Invalid choice. "
@@ -142,19 +143,19 @@ int main() {
                             college_choice = std::stoi(answer);
                             switch (college_choice) {
                                 case 1:
-                                    //ai.question();
+                                    //ai.question("What are scholarships?");
                                     break;
                                 case 2:
-                                    //ai.question();
+                                    //ai.question("Where can I attend college for free?");
                                     break;
                                 case 3:
-                                    //ai.question();
+                                    //ai.question("What is FAFSA?");
                                     break;
                                 case 4:
-                                    //ai.question();
+                                    //ai.question("How do I know I am eligible for FAFSA");
                                     break;
                                 case 5:
-                                    //ai.question();
+                                    //ai.question("Go back to main menu");
                                     break;
                                 default:
                                     std::cout << "Invalid choice. "
@@ -192,7 +193,7 @@ int main() {
 
 void display_main_menu() {
     std::cout << "Main Menu\n"
-              << "1. Ask me anything\n"
+              << "1. Ask Fy anything\n"
               << "2. Credit Questions\n"
               << "3. Government Aid Questions\n"
               << "4. College Questions\n"
