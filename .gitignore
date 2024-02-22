@@ -5,3 +5,5 @@ debug
 src/openai_api_key_test.sh
 
 DOCUMENTATION.md
+
+.vscode
