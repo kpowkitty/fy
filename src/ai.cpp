@@ -74,3 +74,5 @@ void AI::question(const std::string& question) {
     // print the response
     std::cout << "Fy: " << _conversation.GetLastResponse() << std::endl;
 }
+
+int main() { return 0; }

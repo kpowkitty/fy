@@ -36,7 +36,7 @@ int main() {
 
     std::cout << "Hi, I'm Fy, your financial guide! "
               << "Please choose a prompt to get started." << std::endl;
-    
+
     do {
         display_main_menu();
         std::cin >> answer;
@@ -176,12 +176,12 @@ int main() {
                     break;
                 default:
                     std::cout << "Invalid choice. "
-                              << "Please select a number from 1-5." 
+                              << "Please select a number from 1-5."
                               << std::endl;
             }
-        } 
+        }
         catch (const std::exception& e) {
-            std::cerr << "Invalid input. Please enter a valid number." 
+            std::cerr << "Invalid input. Please enter a valid number."
                       << std::endl;
             std::cin.clear();
         }
