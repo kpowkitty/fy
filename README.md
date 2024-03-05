@@ -20,11 +20,11 @@ money, debt, taxes, or anything else!
 - Originality and Creativity: Project demonstrates substantial originality. Ex. Product combines ideas in a unique way not previously done before, and reflection questions demonstrate thoughtful intention on differentiating it from what currently exists.
 - Reflection: Project includes thoughtful responses that fully answer the reflection questions.
 
-# FY: YOUR FINANCIAL GUIDE
+# Fy: Your Financial Guide!
 
 ## Description
 
-Key Component: She is non-biased, educational based. Her focus is filling the educational gap of financial insecurity, especially with those of lower income.
+Key Component: Her focus is filling the educational gap of financial insecurity, especially with women and those of lower income.
 
 What would it do?  
 - Fy is your AI financial guide.  Ask her questions regarding your finances, and she will provide you with educated answers on how to navigate the financial world!  
@@ -36,20 +36,20 @@ What data would it use?
 - She uses no user-data.
 
 How could it address some of the financial inequalities that currently exist in the world?  
-- Most financial insecurity comes from a lack of financial awareness and education, particularly in minorities.
+- Most financial insecurity comes from a lack of financial awareness and education, particularly in minorities. Thus, she is a free-to-use, light-weight application that anyone can use. It provides the user with pre-determined questions in order to provide them with knowledge they possibly do not know exists.
 
 ## Process Reflection Questions
 How does your project use AI to help people with their finances in a way that hasn't been done before?  
 - By using AI to answer pre-determined questions that the user may not be able to come up with themselves, it gives a more hands off approach for the user, which is in stark contrast to other applets. It assumes the user knows very little, in order to specifically target financially illiterate minorities. Not only that, but it specifically targets women, in order to close the gender gap in wages.
   
 Describe a challenge you faced. How did you overcome it? How did you reach out for help?  
-- Using an external library that requires C++ 17 meant that we could not use Github codespaces or the Replit environment, as they both use older C++ versions. We spent hours discovering this fact, utilizing websites such as google, stack overflow, and the like in order to come to this conclusion. We tried to solve it by upgrading them both, but were met with certain obstacles.
+- Using an external library that requires C++ 17 meant that we could not use Github codespaces or the Replit environment, as they both use older C++ versions. We spent hours discovering this fact, utilizing websites such as google, stack overflow, and the like in order to come to this conclusion. We tried to solve it by upgrading them both, but were met with certain obstacles. This was overcame by using a rolling-release linux distrubution, Gentoo Linux, or modern IDEs, VS code. Understanding the compiler keychain, version, and Long Term Service (LTS) linux distrubtions (like Codespace's Ubuntu LTS) really added to our knowledge of how different systems work together. Also, it emphasized the pros and cons of developing using older C++ standards for legacy systems versus utilizing modern C++ standards.
   
 What did you learn from this process that will impact the way you interact with technology in the future?	
 - Knowing how different environments work was a hard lesson to learn. Moving forward, we realize we would be better off using IDE's or terminal environments that are not hard-locked to a certain release.
   
 Why did you choose this format for your project?  
-- As for the language, we wanted to work with C++ as it is our preferred language to write in. It's almost low-level, close to hardware, with great manipulation and control. But for the project itself; a console-application approach was key to us. It creates an interactive console menu that anyone can use on any computer. By doing this simplistic approach, it requires very little financial cost to use. Then, it is full of questions the user can choose from, without them needing to conjure up the question themself, so if they are completely uninformed, they have a great starting place. In addition to this, we have specifically included a section about feminine financial issues, to not only target financial minorities, but also gender minorities, as well.  
+- As for the language, we wanted to work with C++ as it is our preferred language to write in. Because it's suited for low-level programming, it is very powerful. But, without the abstraction of higher level languages, simple tasks are difficult, especially text parsing. As for the project itself; a console-application approach was key to us. It creates an interactive console menu that anyone can use on any computer. By doing this simplistic approach, it requires very little financial cost to use. Then, it is full of questions the user can choose from, without them needing to conjure up the question themself, so if they are completely uninformed, they have a great starting place. In addition to this, we have specifically included a section about female financial issues, to not only target financial minorities, but also gender minorities, as well.  
 
   
 ## Authors
