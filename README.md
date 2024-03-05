@@ -36,18 +36,7 @@ What data would it use?
 - She uses no user-data.
 
 How could it address some of the financial inequalities that currently exist in the world?  
-- Most financial insecurity comes from a lack of financial awareness and education, particularly in minorities.
-
-## Fy can advise:  
-      * How much does the average consumer spend on [xyz]?  
-      * Where am I spending too much money?  
-      * The importance of:  
-           - education, including free college opportunities and scholarships  
-           - building credit
-           - investing in retirement
-           - how to save effectively within the user's budget
-           - buying within your means (big purchases such as cars/houses/etc)
-      
+- Most financial insecurity comes from a lack of financial awareness and education, particularly in minorities.     
   
 ## Authors
 
