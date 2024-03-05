@@ -33,10 +33,10 @@ Who would it help?
 - Fy would help everyone come to better financial security, particularly fighting the educational gap of financial information.  
 
 What data would it use?   
-- Fy will only accept whatever data you consent to give her.  
+- She uses no user-data.
 
 How could it address some of the financial inequalities that currently exist in the world?  
-- Most financial insecurity comes from a lack of financial awareness and education, particularly in minorities. She aims to be understandable, knowledgable, and educational in order to fill this gap.  
+- Most financial insecurity comes from a lack of financial awareness and education, particularly in minorities.
 
 ## Fy can advise:  
       * How much does the average consumer spend on [xyz]?  
