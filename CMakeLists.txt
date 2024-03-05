@@ -17,7 +17,8 @@ file(GLOB LIBOAI_SRC
     )
 
 # add src code
-add_executable(fy src/ai.cpp
+add_executable(fy src/main.cpp
+    src/ai.cpp
     )
 
 # link sfml static lib
@@ -61,20 +62,19 @@ target_include_directories(fy PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/dep/libaoi/liboai/include)
 
 # dir for lib to link
-target_link_directories(fy PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/perl/)
+#target_link_directories(fy PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/perl/)
 
-target_sources(fy PUBLIC src/ai.cpp)
+target_sources(fy PUBLIC src/main.cpp)
 
 # link lib needed
 target_link_libraries(fy PUBLIC
-    #${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai.a
+    ${CMAKE_CURRENT_SOURCE_DIR}/dep/liboai/liboai/lib/liboai.a
     curl
     sfml-graphics
     sfml-window
     sfml-system
     OpenGL
     GL
-    liboai.a
     )
 
 # include local include, liboai include, and json include
@@ -107,7 +107,8 @@ target_include_directories(test PRIVATE
 
 
 target_sources(test PUBLIC src/test.cpp
-    src/ai.cpp)
+    src/ai.cpp
+    )
 
 # link lib needed
 target_link_libraries(test PUBLIC
