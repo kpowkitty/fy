@@ -59,6 +59,12 @@ Why did you choose this format for your project?
 
   Group Members:  
      @huynhkatrina
+
+## Libraries used   
+
+https://github.com/D7EAD/liboai C++ bindings for OpenAI API  
+  
+https://github.com/nlohmann/json JSON for Modern C++
      
 # For collaborators
 * Read HELP
