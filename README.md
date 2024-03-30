@@ -51,6 +51,7 @@ What did you learn from this process that will impact the way you interact with 
 Why did you choose this format for your project?  
 - As for the language, we wanted to work with C++ as it is our preferred language to write in. Because it's suited for low-level programming, it is very powerful. But, without the abstraction of higher level languages, simple tasks are difficult, especially text parsing. As for the project itself; a console-application approach was key to us. It creates an interactive console menu that anyone can use on any computer. By doing this simplistic approach, it requires very little financial cost to use. Then, it is full of questions the user can choose from, without them needing to conjure up the question themself, so if they are completely uninformed, they have a great starting place. In addition to this, we have specifically included a section about female financial issues, to not only target financial minorities, but also gender minorities, as well.  
 
+Project video demonstration: https://youtu.be/95dlm2GQI80
   
 ## Authors
 
